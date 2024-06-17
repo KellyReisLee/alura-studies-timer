@@ -1,27 +1,33 @@
 import React from 'react'
+import './list.style.scss'
 
 const List: React.FC = () => {
 
   const tasks = [
     {
-      id: 1,
-      task: 'react - learn more about it.',
+
+      task: 'React - Learn more about it.',
       time: '02:00:00'
     },
     {
-      id: 2,
+
       task: 'Javascript - Studies',
       time: '01:00:00'
+    },
+    {
+
+      task: 'CSS - Animations',
+      time: '01:30:00'
     },
 
   ]
   return (
-    <aside>
+    <aside className='listaTarefas'>
       <h2>Daily Studies:</h2>
       <ul>
         {
-          tasks.map((item) => (
-            <li key={item.id}>
+          tasks.map((item, index) => (
+            <li className='item' key={index}>
               <h3>
                 {item.task}
 

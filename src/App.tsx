@@ -1,5 +1,5 @@
 
-import './App.css'
+import './App.style.scss'
 import Form from './components/Form'
 import List from './components/List'
 
@@ -8,10 +8,10 @@ function App() {
 
 
   return (
-    <>
+    <div className='AppStyle'>
       <Form />
       <List />
-    </>
+    </div>
   )
 }
 
