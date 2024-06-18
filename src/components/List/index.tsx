@@ -1,5 +1,5 @@
 import React from 'react'
-import './list.style.scss'
+import style from './list.style.module.scss'
 
 const List: React.FC = () => {
 
@@ -22,12 +22,12 @@ const List: React.FC = () => {
 
   ]
   return (
-    <aside className='listaTarefas'>
+    <aside className={style.listaTarefas}>
       <h2>Daily Studies:</h2>
       <ul>
         {
           tasks.map((item, index) => (
-            <li className='item' key={index}>
+            <li className={style.item} key={index}>
               <h3>
                 {item.task}
 
@@ -38,8 +38,6 @@ const List: React.FC = () => {
             </li>
           ))
         }
-
-
       </ul>
     </aside>
   )

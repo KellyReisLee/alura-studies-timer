@@ -1,21 +1,21 @@
 import React from 'react'
 import Button from '../Button'
-import './form.style.scss'
+import style from './form.style.module.scss'
 
 const Form: React.FC = () => {
   return (
-    <form className='novaTarefa'>
+    <form className={style.novaTarefa}>
       {/* First */}
-      <div className='inputContainer' >
+      <div className={style.inputContainer} >
         <label htmlFor='task'>Add a new study:</label>
         <input type='text' name='task' id='task' placeholder='What do you want learn?' required />
       </div>
       {/* Second */}
-      <div className='inputContainer'>
+      <div className={style.inputContainer}>
         <label htmlFor='time'></label>
         <input type='time' step='1' name='time' id='time' min='00:00:00' max='01:30:00' required />
       </div>
-      <Button />
+      <Button text='Adicionar' />
     </form>
   )
 }

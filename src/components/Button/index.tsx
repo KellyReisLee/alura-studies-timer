@@ -1,9 +1,11 @@
 import React from 'react'
-import './button.style.scss'
+import style from './button.style.module.scss'
 
-const Button: React.FC = () => {
+const Button: React.FC<{ text: string }> = ({ text }) => {
   return (
-    <button className='botao'>Button</button>
+    <button className={style.botao}>
+      {text}
+    </button>
   )
 }
 
