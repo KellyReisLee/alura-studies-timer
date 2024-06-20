@@ -4,10 +4,11 @@ import style from './clock.style.module.scss'
 
 
 type Props = {
-  timer: number
+  timer: number;
+
 }
 
-const Clock = ({ timer = 0 }: Props) => {
+const Clock = ({ timer = 0, }: Props) => {
   const minutes = Math.floor(timer / 60);
   const seconds = timer % 60;
   const [minutesDez, minutesUni] = String(minutes).padStart(2, '0')

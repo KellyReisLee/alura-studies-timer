@@ -8,10 +8,11 @@ import { timerConversor } from '../../common/utils/date'
 
 type Props = {
   selectedOb: ListType | undefined;
+  finishTask: () => void;
 
 }
 
-const Time = ({ selectedOb }: Props) => {
+const Time = ({ selectedOb, finishTask }: Props) => {
   const [timer, setTimer] = useState<number>(0);
 
 
@@ -19,27 +20,19 @@ const Time = ({ selectedOb }: Props) => {
     if (selectedOb?.time) {
       setTimer(timerConversor(selectedOb.time))
     }
-  }, [timer, selectedOb])
+  }, [selectedOb])
   console.log(timer)
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
+  function regressiva(contador: number = 0) {
+    setTimeout(() => {
+      if (contador > 0) {
+        setTimer(contador - 1);
+        return regressiva(contador - 1);
+      }
+      finishTask()
 
-    if (timer !== null && timer > 0) {
-      interval = setInterval(() => {
-        setTimer(prevTimer => (prevTimer !== null && prevTimer > 0 ? prevTimer - 1 : 0));
-      }, 1000);
-    }
-
-    return () => clearInterval(interval); // Limpar o intervalo quando o componente for desmontado ou o timer mudar
-  }, [timer]);
-
-  const regressiva = () => {
-    if (selectedOb?.time) {
-      setTimer(timerConversor(selectedOb.time));
-    }
-  };
-
+    }, 1000)
+  }
 
 
   return (
@@ -51,7 +44,7 @@ const Time = ({ selectedOb }: Props) => {
         <Clock timer={timer} />
 
       </div>
-      <Button onClick={regressiva} text='Start' />
+      <Button onClick={() => regressiva(timer)} text='Start' />
     </div>
   )
 }

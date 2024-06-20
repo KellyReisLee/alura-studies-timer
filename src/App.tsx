@@ -14,16 +14,30 @@ function App() {
     setTaskData((prev) =>
       prev.map((item) => ({
         ...item,
-        selected: item.id === taskSelected.id,
+        selected: item.id === taskSelected.id ? true : false,
       }))
     );
   };
+
+  function finishTask() {
+    if (selectedOb) {
+      setSelectedOb(undefined)
+      setTaskData(prev => prev.map((item) => {
+        if (item.id === selectedOb.id) {
+          return {
+            ...item, selected: false, completed: true
+          }
+        }
+        return item
+      }))
+    }
+  }
 
   return (
     <div className={style.AppStyle}>
       <Form setTasks={setTaskData} />
       <List list={taskData} onSelectTask={handleSelectedTask} />
-      <Time selectedOb={selectedOb} />
+      <Time selectedOb={selectedOb} finishTask={finishTask} />
     </div>
   );
 }
