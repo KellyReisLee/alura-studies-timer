@@ -8,7 +8,6 @@ The objective of the project is to consolidate the learning of useState and useE
 <h5>Small timer dashboard using React.js</h5>
 
 - [Configuration and Setup](#configuration-and-setup)
-- [Key Features](#key-features)
 - [Technologies used](#technologies-used)
   - [Frontend](#frontend)
 - [📸 Screenshots](#screenshots)
@@ -20,7 +19,7 @@ In order to run this project locally, simply fork and clone the repository or do
 
 - Open the project in your prefered code editor.
 - Go to terminal -> New terminal (If you are using VS code)
-- Split your terminal into two (run the Frontend on one terminal and the Backend on the other terminal)
+- Split your terminal into two (run the Frontend on one terminal)
 
 In the first terminal
 
@@ -29,7 +28,6 @@ $ cd alura-learn-react-typescript
 $ npm install (to install frontend-side dependencies)
 $ npm run dev for vite projects.
 ```
-
 
 <br/>
 
@@ -56,8 +54,6 @@ This project was created using the following technologies.
 <a href="https://freeimage.host/"><img src="https://iili.io/dHTV6g9.png" alt="dHTV6g9.png" border="0" /></a>
 
 ---
-
-
 ---
 
 ## Author
