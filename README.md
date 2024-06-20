@@ -61,4 +61,4 @@ This project was created using the following technologies.
 
 - Portfolio: [kellywebdeveloper](https://kellydeveloper.vercel.app)
 - Github: [KellyReisLee](https://github.com/KellyReisLee)
-- LinkedIn: [kellyreis-webdev](https://www.linkedin.com/in/kellyreis-webdev/)
+- Linkedin: [kellyreis-webdev](https://www.linkedin.com/in/kellyreis-webdev/)
