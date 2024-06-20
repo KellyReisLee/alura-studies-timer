@@ -40,6 +40,7 @@ This project was created using the following technologies.
 - [React js ](https://www.npmjs.com/package/react) - JavaScript library that is used for building user interfaces specifically for single-page applications
 - [React Hooks ](https://reactjs.org/docs/hooks-intro.html) - For managing and centralizing application state
 - [uuid](https://www.npmjs.com/package/uuid) - Create unique ids.
+- [SASS](https://www.npmjs.com/package/sass) - Sass (Syntactically Awesome Style Sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 
 
 
@@ -60,3 +61,4 @@ This project was created using the following technologies.
 
 - Portfolio: [kellywebdeveloper](https://kellydeveloper.vercel.app)
 - Github: [KellyReisLee](https://github.com/KellyReisLee)
+- LinkedIn: [kellyreis-webdev](https://www.linkedin.com/in/kellyreis-webdev/)
