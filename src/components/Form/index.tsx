@@ -32,7 +32,7 @@ const Form: React.FC<{ setTasks: React.Dispatch<React.SetStateAction<ListType[]>
   }
 
   return (
-    <form onSubmit={handleSubmit} className={style.novaTarefa}>
+    <form onSubmit={handleSubmit} className={style.newTask}>
       {/* First */}
       <div className={style.inputContainer} >
         <label htmlFor='task'>Add a new study:</label>
@@ -42,6 +42,7 @@ const Form: React.FC<{ setTasks: React.Dispatch<React.SetStateAction<ListType[]>
       <div className={style.inputContainer}>
         <label htmlFor='time'></label>
         <input onChange={handleChange} value={dataForm.time} type='time' step='1' name='time' id='time' min='00:00:00' max='01:30:00' required />
+
       </div>
       <Button type='submit' text='Adicionar' />
     </form>

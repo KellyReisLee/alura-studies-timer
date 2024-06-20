@@ -38,7 +38,7 @@ const Time = ({ selectedOb, finishTask }: Props) => {
   return (
     <div className={style.time}>
       <p className={style.title}>Choose one card and start the time:</p>
-      Tempo: {timer}
+
       <div className={style.clockWrapper}>
 
         <Clock timer={timer} />

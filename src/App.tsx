@@ -5,8 +5,25 @@ import List from './components/List';
 import Time from './components/Time';
 import { ListType } from './types/task';
 
+let tasksData = [
+  {
+    id: '42wt4get6ddrgth324354',
+    task: 'Learn Context API - React',
+    time: '00:00:10',
+    selected: false,
+    completed: false
+  },
+  {
+    id: 'dgetsyehwusjdh324354',
+    task: 'Arrays in Javascript ',
+    time: '00:00:10',
+    selected: false,
+    completed: false
+  }
+]
+
 function App() {
-  const [taskData, setTaskData] = useState<ListType[]>([]);
+  const [taskData, setTaskData] = useState<ListType[]>(tasksData);
   const [selectedOb, setSelectedOb] = useState<ListType>();
 
   const handleSelectedTask = (taskSelected: ListType) => {
@@ -19,6 +36,8 @@ function App() {
     );
   };
 
+
+  console.log(selectedOb)
   function finishTask() {
     if (selectedOb) {
       setSelectedOb(undefined)
